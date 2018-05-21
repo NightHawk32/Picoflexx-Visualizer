@@ -5,7 +5,7 @@ and allows to switch between different operation modes.
 
 ![alt text](https://github.com/NightHawk32/Picoflexx-Visualizer/blob/master/doc/wpf_gui.PNG "Picoflexx WPF GUI")
 
-## H1 Build Instructions
+## Build Instructions
 Copy the following files to the picoflexx_visualizer folder:
 * royale.dll
 * royaleCAPI.dll
