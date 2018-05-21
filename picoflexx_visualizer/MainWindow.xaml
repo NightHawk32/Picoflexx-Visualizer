@@ -1,0 +1,50 @@
+﻿<Window x:Class="cam_cs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="900" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Header="Camera Info" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="225" Width="298">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="15*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"  />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Content="Cameras"/>
+                <ComboBox x:Name="cbCameras" Grid.Column="1" Margin="2,2,2,2" SelectionChanged="cbCameras_SelectionChanged" />
+                <Button x:Name="btnDetectCameras" Grid.Row="1" Grid.Column="1" Content="Detect Cameras" Margin="2,2,2,2" Click="btnDetectCameras_Click" />
+                <Button x:Name="btnOpenCamera" Grid.Row="2" Grid.Column="1" Content="Open Camera" Margin="2,2,2,2" Click="btnOpenCamera_Click" IsEnabled="False"/>
+
+                <Label Grid.Row="3" Content="Camera Name" Grid.Column="0" Margin="2,2,2,2" />
+                <TextBox x:Name="tbCameraName" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap"  Margin="2,2,2,2" IsEnabled="False" />
+
+                <Label Grid.Row="4" Content="Sensor Width" Grid.Column="0" Margin="2,2,2,2" />
+                <TextBox x:Name="tbMaxWidth" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap"  Margin="2,2,2,2" IsEnabled="False" />
+
+                <Label Grid.Row="5" Content="Sensor Height" Grid.Column="0" Margin="2,2,2,2" />
+                <TextBox x:Name="tbMaxHeight" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap"  Margin="2,2,2,2" IsEnabled="False" />
+
+                <Label Grid.Row="6" Grid.Column="0" Margin="2,2,2,2" Content="Use Cases"/>
+                <ComboBox x:Name="cbUseCases" Grid.Row="6" Grid.Column="1" Margin="2,2,2,2" SelectionChanged="cbUseCases_SelectionChanged" />
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnStartCapture" Content="Start Capturing" HorizontalAlignment="Left" Margin="354,135,0,0" VerticalAlignment="Top" Width="118" Click="btnStartCapture_Click" IsEnabled="False" Height="40"/>
+        <Button x:Name="btnSaveImages" Content="Save Images" HorizontalAlignment="Left" Margin="354,69,0,0" VerticalAlignment="Top" Width="118" Click="btnSaveImagesClick" IsEnabled="True" Height="40"/>
+        <Image x:Name="imgDataGray" HorizontalAlignment="Left" Height="296" Margin="10,250,0,0" VerticalAlignment="Top" Width="405"/>
+        <Image x:Name="imgDataDepth" HorizontalAlignment="Left" Height="296" Margin="458,250,0,0" VerticalAlignment="Top" Width="405"/>
+
+
+
+
+
+    </Grid>
+</Window>
